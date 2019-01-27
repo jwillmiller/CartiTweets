@@ -1,0 +1,2 @@
+worker: python tweepyStreamer.py
+web: python server.py
