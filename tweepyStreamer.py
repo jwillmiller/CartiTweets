@@ -16,7 +16,7 @@ from os import environ
 #get API keys from Heroku environment
 consumer_key = environ['CONSUMER_KEY']
 consumer_secret = environ['CONSUMER_SECRET']
-access_key = environ['ACCESS_KEY']
+access_token = environ['ACCESS_KEY']
 access_secret = environ['ACCESS_SECRET']
  
 #Twitter OAuth
@@ -54,10 +54,3 @@ class MyListener(StreamListener):
  
 twitter_stream = Stream(auth, MyListener())
 twitter_stream.filter(track=['playboi carti','carti'])
-
-"""
-writing to file:
-with open('tweetData.json', 'a') as f:
-    f.write(data.text)
-    return True
-"""
