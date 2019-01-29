@@ -28,7 +28,7 @@ api = tweepy.API(auth)
 class MyListener(StreamListener):
     def on_status(self, status):
         try:
-            with open('tweetData.txt', 'a') as f:
+            with open('tweetData.html', 'a') as f:
                 data = '' #string of tweet data that will go to file
                 #first check for links
                 if 'urls' in status.entities:
@@ -37,12 +37,12 @@ class MyListener(StreamListener):
                         if any(y in item['expanded_url'].lower() for y in url_params):
                             data += item['expanded_url']
                             print(item['expanded_url'])
-                #then tweet text
+                #then check for tweet text
                 search_params = ['youtu.be','youtube.com','soundcloud.com','soundcloud']
                 if any(x in status.text.lower() for x in search_params):
                     data = data + ', ' + status.text
-                    print(status.text)
-                f.write(data)
+                    print(status.text) 
+                f.write(data) #write to file
                 return True
         except BaseException as e:
             print("Error on_data: %s" % str(e))
