@@ -28,7 +28,7 @@ api = tweepy.API(auth)
 class MyListener(StreamListener):
     def on_status(self, status):
         try:
-            with open('tweetData.html', 'a') as f:
+            with open('tweetData.txt', 'a') as f:
                 data = '' #string of tweet data that will go to file
                 #first check for links
                 if 'urls' in status.entities:
