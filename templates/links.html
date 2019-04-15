@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+ 
+{% block tweets %} 
+<b> Playboi Carti Soundcloud & Youtube Links </b>
+    {% for link in links %}
+        <br>{{ link | safe}}</br>
+    {% endfor %}
+    
+ 
+ {% endblock %}

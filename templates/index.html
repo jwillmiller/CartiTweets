@@ -1,10 +1,13 @@
 <html>
-	<head>
-		<link rel="stylesheet" href="/static/style.css" />
-		<title>{{ author }}'s app</title>
-	</head>
-	
-	<body>
-		<h2>Hello {{ name }}!</h2>
-	</body>
+  <head>  
+ 
+      {% block graphs %} {% endblock %}
+  </head>
+ 
+  <body>
+    {% block div %}  {% endblock %}
+ 
+    {% block tweets %}  {% endblock %}
+ 
+</body>
 </html>
