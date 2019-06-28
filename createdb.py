@@ -16,14 +16,14 @@ c = conn.cursor()
 
 try:
     #c.execute("drop table carti_links")
-    c.execute("drop table uzi_links")
+    c.execute("drop table carti_links")
 except:
     # Nothing to drop, do nothing.
     pass
 
 
-#cmd = "CREATE TABLE carti_links (link TEXT, datetime TEXT)"
-cmd = "CREATE TABLE uzi_links (link TEXT, datetime TEXT)"
+cmd = "CREATE TABLE carti_links (link TEXT, datetime TEXT)"
+#cmd = "CREATE TABLE uzi_links (link TEXT, datetime TEXT)"
 
 c.execute(cmd)
 
